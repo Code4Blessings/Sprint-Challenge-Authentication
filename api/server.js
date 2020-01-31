@@ -17,4 +17,11 @@ server.use('/api/auth', authRouter);
 server.use('/api/jokes', authenticate, jokesRouter);
 server.use('/api/users', userRouter);
 
+server.get("/", (req, res) => {
+  res.send({
+    Greeting: "Greetings from Port 3300"
+  });
+});
+
+
 module.exports = server;
